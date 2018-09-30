@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{FDE48F6B-A567-4A71-8E97-6CC4B5A0CE8C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RiversideDistributer</RootNamespace>
+    <AssemblyName>RiversideDistributer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FC\Interfaces\iIsle.cs" />
+    <Compile Include="FC\Interfaces\iWarehouse.cs" />
+    <Compile Include="FC\Interfaces\iBay.cs" />
+    <Compile Include="FC\Interfaces\iShelf.cs" />
+    <Compile Include="FC\Interfaces\iPosition.cs" />
+    <Compile Include="FC\Classes\Isle.cs" />
+    <Compile Include="FC\Classes\Warehouse.cs" />
+    <Compile Include="FC\Classes\Bay.cs" />
+    <Compile Include="FC\Classes\Shelf.cs" />
+    <Compile Include="FC\Classes\Position.cs" />
+    <Compile Include="ConfigValues.cs" />
+    <Compile Include="FC\Enums\IsleBayConfiguration.cs" />
+    <Compile Include="FC\Enums\WmsBrand.cs" />
+    <Compile Include="FC\Enums\SnapShelves.cs" />
+    <Compile Include="FC\Helper.cs" />
+    <Compile Include="Assigner\AssignmentLogic.cs" />
+    <Compile Include="Assigner\assignPositionResults.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FC\" />
+    <Folder Include="FC\Interfaces\" />
+    <Folder Include="FC\Classes\" />
+    <Folder Include="FC\Enums\" />
+    <Folder Include="Assigner\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
