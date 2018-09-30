@@ -16,7 +16,7 @@ namespace RiversideDistributer.Config
         public static string riversideName = "RVS1";
         public static List<int> oddIsles = new List<int>() { 34 };
         public static List<int> evenIsles = new List<int>() {};
-        public static wmsBrand brandInUse = wmsBrand.Snap;
+        public static wmsBrand brandInUse = wmsBrand.CurrentWMS;
     }
 
     /// <summary>
@@ -65,13 +65,13 @@ namespace RiversideDistributer.Config
 
         private wmsBrand GetWmsBrand(string wms)
         {
-            if (wms == "SNAP")
+            if (wms == "THIS")
             {
-                return wmsBrand.Snap;
+                return wmsBrand.CurrentWMS;
             }
-            else if (wms == "GEN2")
+            else if (wms == "NEXT")
             {
-                return wmsBrand.Gen2;
+                return wmsBrand.NextWMS;
             }
             else
             {

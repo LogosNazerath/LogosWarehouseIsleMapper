@@ -48,7 +48,7 @@
     <Compile Include="ConfigValues.cs" />
     <Compile Include="FC\Enums\IsleBayConfiguration.cs" />
     <Compile Include="FC\Enums\WmsBrand.cs" />
-    <Compile Include="FC\Enums\SnapShelves.cs" />
+    <Compile Include="FC\Enums\CurrentShelves.cs" />
     <Compile Include="FC\Helper.cs" />
     <Compile Include="Assigner\AssignmentLogic.cs" />
     <Compile Include="Assigner\assignPositionResults.cs" />

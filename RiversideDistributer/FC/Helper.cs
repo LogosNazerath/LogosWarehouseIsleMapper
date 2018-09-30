@@ -7,11 +7,11 @@ namespace RiversideDistributer.FC
     {
         public static string GetLocation(wmsBrand Brand, string Isle, string Bay, string Shelf, string Position)
         {
-            if (Brand == wmsBrand.Gen2)
+            if (Brand == wmsBrand.NextWMS)
             {
                 throw new NotImplementedException();
             }
-            else if (Brand == wmsBrand.Snap)
+            else if (Brand == wmsBrand.CurrentWMS)
             {
                 return $"{Isle}-{Bay}-{Shelf}-{Position}";
             }

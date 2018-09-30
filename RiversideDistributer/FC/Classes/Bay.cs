@@ -24,13 +24,13 @@ namespace RiversideDistributer.FC.Classes
 
             for (int i = 1; i <= 5; i++)
             {
-                if (this.inIsle.InWarehouse.WmsBrand == wmsBrand.Gen2)
+                if (this.inIsle.InWarehouse.WmsBrand == wmsBrand.NextWMS)
                 {
                     shelves.Add(new Shelf(this, i));
                 }
                 else
                 {
-                    shelves.Add(new SnapShelf(this,i));
+                    shelves.Add(new currentShelf(this,i));
                 }
             }
         }

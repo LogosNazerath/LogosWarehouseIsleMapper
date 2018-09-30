@@ -91,11 +91,16 @@ namespace RiversideDistributer.Assigner
                 new Tuple<int, int>(31, FC.Isles.Max(f => f.IsleID))
             };
 
+            if(!int.TryParse(ConfigurationManager.AppSettings["InputFilePath"].ToString(), out int shelfCount))
+            {
+                throw new ConfigurationErrorsException("Failed to parse shelf count in app config.");
+            }
+
             //Loopes through each range of isles
             foreach(Tuple<int,int> range in Ranges)
             {
-                //Goes shelf by shelf across FC.=
-                for (int s = 1; s <= 5;s++)
+                //Goes shelf by shelf across each range.
+                for (int s = 1; s <= shelfCount;s++)
                 {
                     restartRangeAt = 0;
                     currentIsle = range.Item1;

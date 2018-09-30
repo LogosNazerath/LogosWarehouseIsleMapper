@@ -99,13 +99,13 @@ namespace RiversideDistributer.FC.Classes
         }
 
     }
-    public class SnapShelf : Shelf
+    public class currentShelf : Shelf
     {
-        private snapShelves shelfLetter;
+        private currentShelves shelfLetter;
 
-        public SnapShelf(iBay inbay, int shelfid) : base(inbay, shelfid)
+        public currentShelf(iBay inbay, int shelfid) : base(inbay, shelfid)
         {
-            shelfLetter = (snapShelves)shelfid;
+            shelfLetter = (currentShelves)shelfid;
         }
 
         public override string GetShelfName()
@@ -113,6 +113,6 @@ namespace RiversideDistributer.FC.Classes
             return shelfLetter.ToString();
         }
 
-        public snapShelves ShelfLetter => shelfLetter;
+        public currentShelves ShelfLetter => shelfLetter;
     }
 }
